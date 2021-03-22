@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>yourname</title>
+    <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -22,7 +22,7 @@
     <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
         <table>
             <tr>
-                <td id="logo">yourname.</td>
+                <td id="logo">{{name}}</td>
                 <td id="navigation">
                     <a href="#work">work</a>
                     <a href="#bio">about</a>
@@ -79,20 +79,18 @@
                         <div id="inner_div">
                             <table id="inner_table">
                                 <tr>
-                                    <td><i class="fas fa-phone"></i> &nbsp; +1 234 567 8910</td>
+                                    <td><i class="fas fa-phone"></i> &nbsp; {{info.tel}}</td>
                                 </tr>
                                 <tr>
-                                    <td><i class="fas fa-at"></i> &nbsp; yourname@email.com</td>
+                                    <td><i class="fas fa-at"></i> &nbsp; {{info.email}}</td>
                                 </tr>
                                  <tr>
-                                    <td><i class="fas fa-fax"></i> &nbsp; +1 234 567 8910</td>
+                                    <td><i class="fas fa-fax"></i> &nbsp; {{info.phone}}</td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-map-marker-alt"></i>
                                     <div id="address">
-                                        Street 123,<br>
-                                        blah blah city,<br>
-                                        blah blah country
+                                        {{info.address}}
                                     </div>
                                     </td>
                                 </tr>
