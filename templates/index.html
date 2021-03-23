@@ -54,7 +54,7 @@
         <h1>work</h1>
         <div id="photos">
             {% for img in images %}
-            <img onclick="magnify($(this).attr('src'))" src=" {{baseUrl}}/{{img.Img}} ">
+            <img onclick="magnify($(this).attr('src'))" src=" {{img.Img}} ">
             <span>{{img.desc}}</span>
 
             {% endfor %}
