@@ -1,8 +1,5 @@
 from django.db import models
 
-class contactInfo:
-    tel:str
-    email: str
-    phone:str
-    address:str
-
+class gallerySource(models.Model):
+ img=models.ImageField(upload_to='pics')
+ desc=models.CharField(max_length=100)
