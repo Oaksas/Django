@@ -53,9 +53,10 @@
     <div id="work">
         <h1>work</h1>
         <div id="photos">
-            {% for img in images %}
-            <img onclick="magnify($(this).attr('src'))" src=" {{img.Img}} ">
-            <span>{{img.desc}}</span>
+            {% for image in images %}
+            <img onclick="magnify($(this).attr('src'))" src="{{image.img.url}}" alt="{{img.img.url}}">
+
+            <span>{{image.desc}}</span>
 
             {% endfor %}
             <!-- <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549375463-8cbc18ca3f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80">
