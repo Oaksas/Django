@@ -23,5 +23,11 @@
 
 
     </form>
+
+    <div>
+        {% for message in messages %}
+        <h3 style="color:red">{{message}}</h3>
+        {% endfor %}
+    </div>
 </body>
 </html>
