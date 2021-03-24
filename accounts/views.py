@@ -13,10 +13,14 @@ def register(request):
         passwordConfirm = request.POST['confirmPassword']
 
         if(password == passwordConfirm):
-            user = User.objects.create_user(username= username, first_name=firstName,last_name=lastName,email=email,password=password)
-            user.save()
-            print('userCreated')
-            return redirect('/')
+            if User.objects.filter(username.username).exists():
+                print('username taken')
+            else:
+                    
+                user = User.objects.create_user(username= username, first_name=firstName,last_name=lastName,email=email,password=password)
+                user.save()
+                print('userCreated')
+                return redirect('/')
         else:
             print('password not much')
     return render(request,'register.html')
