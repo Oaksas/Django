@@ -13,8 +13,10 @@ def register(request):
         passwordConfirm = request.POST['confirmPassword']
 
         if(password == passwordConfirm):
-            if User.objects.filter(username.username).exists():
+            if User.objects.filter(username=username).exists():
                 print('username taken')
+            elif User.objects.filter(email=email).exists():
+                print('email taken')
             else:
                     
                 user = User.objects.create_user(username= username, first_name=firstName,last_name=lastName,email=email,password=password)
